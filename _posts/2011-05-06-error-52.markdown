@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Error 52
+author: noah
+author_login: noah
+author_email: noah@statichippo.com
+wordpress_id: 225
+wordpress_url: http://statichippo.com/blog/archive/2011/05/06/error-52.aspx
+date: 2011-05-06 18:10:22.000000000 -04:00
+categories:
+- Uncategorized
+tags: []
+comments:
+- id: 154
+  author: Bill Robertson
+  author_email: theman@fdrsucks.com
+  author_url: http://billrob.com/
+  date: '2011-05-06 20:38:20 -0400'
+  date_gmt: '2011-05-06 20:38:20 -0400'
+  content: If you don't want to manually remove the directory, using Clean Solution
+    will remove that directory for you.
+---
+
+I get the following error on build intermittently: 
+  >    
+Error 52 It is an error to use a section registered as allowDefinition='MachineToApplication' beyond application level.  This error can be caused by a virtual directory not being configured as an application in IIS. C:\Work\…\web.config 98 Frontend
+   
+I get it infrequently enough that I never remember the fix for it.  I always Google it and come up with the same links – they all imply it’s because of a problem with some configuration.  For me it’s not a configuration problem.  If I delete the \obj directory and rebuild that fixes it.  Go figure.

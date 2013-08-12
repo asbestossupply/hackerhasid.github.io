@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Welcome to my new blog
+author: noah
+author_login: noah
+author_email: noah@statichippo.com
+wordpress_id: 175
+wordpress_url: http://statichippo.com/blog/archive/2009/10/24/new-blog.aspx
+date: 2009-10-25 01:00:43.000000000 -04:00
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+I got tired of my Wordpress.com hosted version of Wordpress and moved over to SubText on my own host.&nbsp; I'm transferring the important posts here.&nbsp; This should give me some more control...<br />
+<br />
+Turns out it's not so easy to transfer between Wordpress and SubText.&nbsp; Wordpress provides export functionality to a Wordpress compatible format (called WXR).&nbsp; SubText on the other hand accepts BlogML format for the imports.<br />
+<br />
+Luckily, someone took most of the legwork out of the conversion already.&nbsp; There's a Wordpress BlogML export utility over on [codeplex](javascript:void(0);/*1256433871452*/) that replaces the built in export utility of Wordpress so that instead of outputting WXR it outputs BlogML.<br />
+<br />
+Since my blog was hosted over at Wordpress.com I don't have much control over this, so I'm going to have to <br />
+<br />
+1) install Wordpress myself (with this BlogML export hack), <br />
+2) import my posts from the hosted edition, <br />
+3) export the posts so that they are now in BlogML format, <br />
+4) and then import to SubText.<br />
+<br />
+Wish me luck!
