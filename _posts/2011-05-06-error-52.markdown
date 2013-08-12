@@ -5,9 +5,7 @@ published: true
 title: Error 52
 author: noah
 author_login: noah
-author_email: noah@statichippo.com
-wordpress_id: 225
-wordpress_url: http://statichippo.com/blog/archive/2011/05/06/error-52.aspx
+author_email: noah@hackerhasid.com
 date: 2011-05-06 18:10:22.000000000 -04:00
 categories:
 - Uncategorized

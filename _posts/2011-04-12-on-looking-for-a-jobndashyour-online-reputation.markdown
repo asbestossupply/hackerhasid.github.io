@@ -2,12 +2,10 @@
 layout: post
 status: publish
 published: true
-title: On looking for a job&ndash;your online reputation
+title: On looking for a job - your online reputation
 author: noah
 author_login: noah
-author_email: noah@statichippo.com
-wordpress_id: 223
-wordpress_url: http://statichippo.com/blog/archive/2011/04/27/On-looking-for-a-jobndashyour-online-reputation.aspx
+author_email: noah@hackerhasid.com
 date: 2011-04-12 21:43:20.000000000 -04:00
 categories:
 - Uncategorized
