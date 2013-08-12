@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+# ruby '1.9.3'
 
 gem 'jekyll',     '=1.1.2'
 gem 'liquid',     '=2.5.1'

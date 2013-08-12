@@ -21,31 +21,30 @@ The sourcecode is available at [on github](https://github.com/hackerhasid/Gracef
   ### GracefulDegradationOutputCacheProvider
   
 This is just a standard OutputCacheProvider (OutputCacheProviders were introduced with ASP.NET 4.0.  Check out [http://weblogs.asp.net/gunnarpeipman/archive/2009/11/19/asp-net-4-0-writing-custom-output-cache-providers.aspx](http://weblogs.asp.net/gunnarpeipman/archive/2009/11/19/asp-net-4-0-writing-custom-output-cache-providers.aspx) for more info).  The interesting piece to note though is that the standard Get method implemented for OutputCacheProvider just calls another Get method that takes a boolean parameter called _respectExpiration_.  The “standard” Get method just passes in true for this.  Here’s the code:
-  
+
 {% highlight csharp %}
-/// <summary>
-/// Gets an item from the cache by key
-/// </summary>
-/// <param name="key" />Key to fine
-/// <param name="respectExpiration" />If true, don't return stale results.  This parameter should be true
-/// in regular caching cases and false if we're retrieving from cache when an exception occurred
-/// <returns></returns>
-internal object Get(string key, bool respectExpiration)
-{
-    Debug.WriteLine("Cache.Get(" + key + ")");
+    /// <summary>
+    /// Gets an item from the cache by key
+    /// </summary>
+    /// <param name="key">Key to find</param
+    /// <param name="respectExpiration">If true, don't return stale results.  This parameter should be true in regular caching cases and false if we're retrieving from cache when an exception occurred </param>
+    /// <returns></returns>
+    internal object Get(string key, bool respectExpiration)
+    {
+        Debug.WriteLine("Cache.Get(" + key + ")");
 
-    CacheItem existing;
-    if (!_items.TryGetValue(key, out existing))
+        CacheItem existing;
+        if (!_items.TryGetValue(key, out existing))
+            return null;
+
+        if (!respectExpiration)
+            return existing.Item;
+
+        if (existing.Expires > DateTime.UtcNow)
+            return existing.Item;
+
         return null;
-
-    if (!respectExpiration)
-        return existing.Item;
-
-    if (existing.Expires > DateTime.UtcNow)
-        return existing.Item;
-
-    return null;
-}
+    }
 {% endhighlight %}
 
 as you can see, the _respectExpiration_ flag is used to override the cache expiration and return the value anyway.  This is used by the:
@@ -61,13 +60,12 @@ this just catches the HttpApplications’s Error event and attempts to write the
 The handler starts off by finding the GracefulDegradationOutputCacheProvider among the available CacheProviders for the application:
 
 {% highlight csharp %}
-// Find the GracefulDegredationOutputCacheProvider
-foreach (var provider in OutputCache.Providers)
-{
-    var inMemoryProvider = provider as GracefulDegradationOutputCacheProvider;
-    if (inMemoryProvider == null)
-        continue;
-
+    // Find the GracefulDegredationOutputCacheProvider
+    foreach (var provider in OutputCache.Providers)
+    {
+        var inMemoryProvider = provider as GracefulDegradationOutputCacheProvider;
+        if (inMemoryProvider == null)
+            continue;
 {% endhighlight %}
 
 the reason this provider isn’t cached in some field is because this can be modified programmatically and so I just loop every time and attempt to find the provider.
@@ -78,27 +76,27 @@ the reason this provider isn’t cached in some field is because this can be mod
 At first I was using a roundabout method to determine an error threshold with a timer firing and clearing error counts – it was pretty awkward.  When I mentioned it to my peers, Joe ([http://twitter.com/#!/joecianflone](http://twitter.com/#!/joecianflone)) really felt the pain and [BillRob](http://billrob.com/) came up with the much simpler approach of just writing the response out from the cache on error.  Duh!  With a few helpful hints from Bill, here’s what I came up with:
 
 {% highlight csharp %}
-var context = HttpContext.Current;
-var response = context.Response;
-// clear response
-response.Clear();
+    var context = HttpContext.Current;
+    var response = context.Response;
+    // clear response
+    response.Clear();
 
-// we don't want anyone caching this old response, right?
-response.CacheControl = "no-cache";
+    // we don't want anyone caching this old response, right?
+    response.CacheControl = "no-cache";
 
-var responseBytes = GetResponseBytes(cacheItem, context);
-// write out response body
-// you can also append some content if you wish,
-// perhaps a floating div that tells the user
-// the page they're seeing is old
-responseBytes.ForEach(x => 
-{
-    response.OutputStream.Write(x, 0, x.Length);
-});
+    var responseBytes = GetResponseBytes(cacheItem, context);
+    // write out response body
+    // you can also append some content if you wish,
+    // perhaps a floating div that tells the user
+    // the page they're seeing is old
+    responseBytes.ForEach(x => 
+    {
+        response.OutputStream.Write(x, 0, x.Length);
+    });
 
-// Don't want to show the error page (though you
-// probably want to alert someone!)
-context.ClearError();
+    // Don't want to show the error page (though you
+    // probably want to alert someone!)
+    context.ClearError();
 {% endhighlight %}
 
 notice that we explicitly tell clients not to cache this!  Also, as mentioned in the comments, I could see adding some hook here to place some floating div somewhere to let people know what they’re seeing may be stale.  Also, the error is cleared so you probably want to log it somewhere – just because your end user doesn’t see an error doesn’t mean you don’t want to know it happened!
