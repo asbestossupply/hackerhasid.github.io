@@ -4,7 +4,7 @@ permalink: /posts/:title
 rdiscount:
   extensions: [smart]
 title : HackerHasid
-production_url : http://www.hackerhasid.com
+production_url : http://blog.hackerhasid.com
 description: "Noah Blumenthal's thoughts and such"
 disqus_shortname: hackerhasid
 analytics: UA-43115922-1
