@@ -1,21 +1,14 @@
 ---
 layout: post
-status: publish
-published: true
 title: Dynamic configuration settings in .NET 4
-author: noah
-author_login: noah
-author_email: noah@hackerhasid.com
-date: 2012-01-12 15:29:52.000000000 -05:00
 categories:
 - ASP.NET
 - C#
 - .NET
-tags: []
-comments: []
 ---
 
 We have a default implementation over our API that we can customize for clients.  In order to support different feature-sets we have a custom configuration section inside our web.config that looks similar to this:
+<!--more-->
 {% highlight xml %}
 <sites />
   <add name="hackerhasid" />

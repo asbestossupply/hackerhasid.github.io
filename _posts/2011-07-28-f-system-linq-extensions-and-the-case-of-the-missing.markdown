@@ -1,22 +1,15 @@
 ---
 layout: post
-status: publish
-published: true
 title: F#, System.Linq extensions and the case of the missing null
-author: noah
-author_login: noah
-author_email: noah@hackerhasid.com
-date: 2011-07-28 20:40:18.000000000 -04:00
 categories:
 - Entity Framework
 - F#
 - .NET
-tags: []
-comments: []
 ---
 
 I posted a question to StackOverflow yesterday ([http://stackoverflow.com/questions/6847203/ef4-1-and-f-how-to-deal-with-values](http://stackoverflow.com/questions/6847203/ef4-1-and-f-how-to-deal-with-values)) and will describe the issue and resolution in this post.
-    
+<!--more-->
+
 F# is a funny language in that it is a functional (I suppose it’s multi-paradigm but very strong emphasis on functional) language built on the .NET platform which has a very different style as a whole.  I had an interesting issue the other day where I noticed a _null_ value at runtime being returned from a .NET component in a place that F# was certain _null_ values could not exist. 
   
 In my case this was Entity Framework.  I followed [this walkthrough](http://blogs.msdn.com/b/jackhu/archive/2011/04/01/f-code-first-development-with-entity-framework-4-1.aspx) to create F# types that mapped to my database using Entity Framework Code First.  I wrote a query that ended in .FirstOrDefault() and here is where the problem started:

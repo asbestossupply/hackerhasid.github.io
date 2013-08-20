@@ -1,20 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: Crimes against internationalization
-author: noah
-author_login: noah
-author_email: noah@hackerhasid.com
-date: 2012-09-25 00:05:05.000000000 -04:00
 categories:
 - C#
 - .NET
 - Internationalization
-tags: []
-comments: []
 ---
 What's wrong with this snippet from Authorize.net's .NET SDK?
+<!--more-->
 {% highlight csharp %}
 public CardPresentPriorAuthCapture(string transactionID, Decimal amount)
 {
