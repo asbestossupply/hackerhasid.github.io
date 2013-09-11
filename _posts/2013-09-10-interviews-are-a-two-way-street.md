@@ -9,8 +9,6 @@ TLDR: [Some Lessons I Learned](#lessons)
 
 ##### The Backdrop
 
-Soon after GroupCommerce closed its doors a buddy referred me to a recruiter friend of his who works with startups. Partly to do him a favor and (obviously?) partly for myself I met with this recruiter. As you can imagine the stages of startups he works with is not exactly what I was looking for but I figured it was worth a shot.
-
 So I had been meeting with entrepreneurs for a while and had some very interesting offers and soon-to-be offers from varying stages of early stage startups. There were two or three that I was very interested in and I figured one of those would probably work out and a decision would be made for me. Then this recruiter called about a company that he thought would be a good fit. Turns out the company provides a single-page javascript app and is using some interesting tech behind the scenes too. They're well funded since the CEO is quite wealthy but after a few years of floundering and a massive rewrite they're desperate for someone to come on and own the client-side. The way the CEO put it is he was looking to finish the tripod on which the business stands - there was already product and backend, he needed someone to own the frontend. As a single-page app, 'frontend' takes on a litte different meaning than on a standard website so though I'm not really a 'frontend' guy, owning the frontend in this case seemed appealing. The startup was already a few years old - not exactly what I had been looking for - but they were still a very small shop and they had just rewritten everything from scratch so in some ways they were brand new. Besides, helping them turn around after struggling for so long would be an incredible experience for me.
 
 ##### The Interview
