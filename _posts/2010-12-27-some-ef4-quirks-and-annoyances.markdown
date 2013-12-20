@@ -51,7 +51,7 @@ public class Person
 Here are the changes I had to make:
 
 
-* Rename __children_ to _childrenBackingStore_.&nbsp; This is necessary because EF4 doesn't support special characters like _.
+* Rename _children_ to _childrenBackingStore_. This is necessary because EF4 doesn't support special characters like _underscore_.
 * Refactor `childrenBackingStore` into a property
 * Make `childrenBackingStore` protected so that EF4 has the necessary access privileges to set it (EF4 will create a proxy that inherits from `Person`)
 * Mark `childrenBackingStore` as `virtual` so that the EF4 proxy can override it and provide lazy loading support

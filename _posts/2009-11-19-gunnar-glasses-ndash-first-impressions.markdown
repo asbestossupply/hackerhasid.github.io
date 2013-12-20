@@ -3,43 +3,10 @@ layout: post
 status: publish
 published: true
 title: Gunnar glasses &ndash; first impressions
-author: noah
-author_login: noah
-author_email: noah@statichippo.com
-wordpress_id: 192
-wordpress_url: http://statichippo.com/blog/archive/2009/11/18/gunnar-glasses-ndash-first-impressions.aspx
 date: 2009-11-19 02:32:43.000000000 -05:00
 categories:
 - Uncategorized
 tags: []
-comments:
-- id: 113
-  author: DimaS
-  author_email: tdyu@mail.ru
-  author_url: ''
-  date: '2010-06-26 09:44:23 -0400'
-  date_gmt: '2010-06-26 09:44:23 -0400'
-  content: Hi! <br />How your filling of Gunnar glasses now. Do you use it now?
-- id: 116
-  author: noah
-  author_email: noah@statichippo.com
-  author_url: http://statichippo.com/
-  date: '2010-07-15 17:38:09 -0400'
-  date_gmt: '2010-07-15 17:38:09 -0400'
-  content: I wear them every day and absolutely love them
-- id: 650
-  author: Jhonatan
-  author_email: admin@outofthered.com.au
-  author_url: http://www.facebook.com/profile.php?id=100003406200469
-  date: '2012-06-28 00:55:05 -0400'
-  date_gmt: '2012-06-28 00:55:05 -0400'
-  content: Use Gunnars at work and play (non-prescription). They work. I got them
-    to fight chronic dry eye and fagitue. Don't be surprised though that yellow glasses
-    make things have a yellow tint. It won't be the  true  color you're seeing when
-    gaming, but it does not degrade the image in any way. They also have a slight
-    zoom btwAlso, don't expect 3l3t3 apm increases marketing garbage. That's just
-    silly. And someone punch this mike character in the gonads for causing this comment
-    cluster $%#@
 ---
 
 I’m typing this while looking at my computer through my brand new pair of Gunnar Optiks Rx glasses.  They were waiting for me this evening when I came home from work.
@@ -50,7 +17,7 @@ First off, my order took two and a half weeks to get to me.  Apparently there w
   
 There are plenty of un-boxing pics and videos available on the interweb, so in DRY fashion, I won’t go into too much detail.  Suffice it to say that the packaging is very sturdy and attractive and definitely gives off a very up-market feeling (although the “made in china” sticker on the inside of the pouch/cloth did undermine that a little).
   
-[![100_1889_Vga](http://statichippo.com/images/statichippo_com/WindowsLiveWriter/Gunnarglassesfirstimpressions_12F1C/100_1889_Vga_thumb.jpg "100_1889_Vga")](http://statichippo.com/images/statichippo_com/WindowsLiveWriter/Gunnarglassesfirstimpressions_12F1C/100_1889_Vga.jpg)__
+![100_1889_Vga](http://statichippo.com/images/statichippo_com/WindowsLiveWriter/Gunnarglassesfirstimpressions_12F1C/100_1889_Vga_thumb.jpg "100_1889_Vga")]
   
 _(Very impressed with how good this picture came out – you know I took it myself pointing the camera at the bathroom mirror!)_
   

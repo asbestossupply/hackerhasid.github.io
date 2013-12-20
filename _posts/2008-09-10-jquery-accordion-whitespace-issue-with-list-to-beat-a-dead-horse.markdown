@@ -16,11 +16,11 @@ comments: []
 ---
 Choffi has this cool side-bar navigation using an accordion (the idea was taken mainly from apple's website which has a similar thing) that's supposed to look something like:
 
-[caption id="attachment_6" align="alignnone" width="271" caption="This is what it should look like"]![This is what it should look like](http://noahblu.files.wordpress.com/2008/09/1.jpg "What it's supposed to look like")[/caption]
+![This is what it should look like](http://noahblu.files.wordpress.com/2008/09/1.jpg "What it's supposed to look like")
 
 I'm using jQuery 1.2.6 and jQuery UI 1.5.2. Everything looks fine in FF, but when I open it in IE7 it looks really bad (although it works):
 
-[caption id="attachment_7" align="alignnone" width="281" caption="Ugggghhhh"]![What's with all the white space?](http://noahblu.files.wordpress.com/2008/09/y1puuhsvpw8uxcl7ytla7ekypkaekuvnxqqecrhuwgvcobxdom4qkq-rikuricae26m3xa7ow4gjz4.jpg "Ugghhhhhh")[/caption]
+![What's with all the white space?](http://noahblu.files.wordpress.com/2008/09/y1puuhsvpw8uxcl7ytla7ekypkaekuvnxqqecrhuwgvcobxdom4qkq-rikuricae26m3xa7ow4gjz4.jpg "Ugghhhhhh")
 
 After some tinkering, I tracked the issue down to the fact that the Accordion sticks a span element before and after each of my list items (<li>Test</li> becomes <span></span><li>Test</li><span></span>) which is forcing everything down I suppose because my li styles indicate the use of background images. I just LOVE FireBug (https://addons.mozilla.org/en-US/firefox/addon/1843)
 

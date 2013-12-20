@@ -1,16 +1,39 @@
-markdown: rdiscount
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
 pygments: true
-permalink: /posts/:title
-rdiscount:
-  extensions: [smart]
-title : HackerHasid
-production_url : http://blog.hackerhasid.com
-description: "Noah Blumenthal's thoughts and such"
-disqus_shortname: hackerhasid
-analytics: UA-43115922-1
-#gauges: 50f2b533613f5d7c8000000c
-author :
-  name : Noah Blumenthal
-  github : hackerhasid
-  twitter : hackerhasid
+
+title: Hacker Hasid
+description: Ramblings
+author:
+  name: Noah Blumenthal
   email: noah@hackerhasid.com
+  github: hackerhasid
+  twitter: hackerhasid
+  linkedin: hackerhasid
+  bio: Startup Hacker
+  email_md5: 547d608fa6b311237344cc0c6ba0dbbe
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH: http://hackerhasid.com
+
+# All links will be namespaced by BASE_PATH if defined.
+# Links in your website should always be prefixed with {{ site.BASE_PATH }}
+# Do not put a "/" at the end of the url.
+#
+# CNAME (http://yourcustomdomain.com)
+#   DO NOT SET BASE_PATH JUST LEAVE IT BLANK 
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Pages (http://username.github.io)
+#   DO NOT SET BASE_PATH JUST LEAVE IT BLANK 
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Project Pages (http://username.github.io/project-name)
+#  A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
+#  REQUIRED! Set BASE_PATH to "http://username.github.io/project-name"
