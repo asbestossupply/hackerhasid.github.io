@@ -27,7 +27,7 @@ I lasted maybe 2 weeks after returning from vacation before resigning. I approac
 
 I ended up sending a retrospective to the CEO, CTO and head of product. As I said in the email, they don't really know me and things didn't work out, so they can take my advice with a grain of salt, but if the roles were reversed I would want to hear their thoughts and so maybe they feel the same way. I also had a recruiter reach out - this was before I took them off my LinkedIn profile - saying he noticed a new job post at my company and would I be interested in working with him to find someone - that was kind of funny.
 
-I quit on the 14th of the month, payroll ran on the 15th and I got a direct deposit. A couple days later the direct deposit was undeposited. I didn't know you could do that. I could understand undepositing part of the paycheck (only right actually - like I said, I quit on the 14th) but the whole thing? Not worth making a big deal about but not a very nice thing to do in my opinion (and possibly illegal?).
+I quit on the 14th of the month, payroll ran on the 15th and I got a direct deposit. A couple days later the direct deposit was undeposited. I didn't know you could do that. I could understand undepositing part of the paycheck (only right actually - like I said, I quit on the 14th) but the whole thing? ~~Not worth making a big deal about but not a very nice thing to do in my opinion (and possibly illegal?).~~ Update: I contacted the CTO and he got this resolved very quickly.
 
 ##### <a id="lessons"></a>The Lessons
 
